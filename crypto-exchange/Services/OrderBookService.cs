@@ -1,7 +1,9 @@
 ﻿using crypto_exchange.DTOs;
+using Microsoft.Extensions.FileProviders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -19,8 +21,7 @@ namespace crypto_exchange.Services
         {
             if (folderPath == null)
             {
-                var path = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName;
-                folderPath = Path.Combine(path, "Exchanges");
+                folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Exchanges");
             }
             var orderBooks = new List<ExchangeOrderBookDto>();
 
