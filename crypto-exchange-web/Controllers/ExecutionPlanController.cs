@@ -41,6 +41,11 @@ namespace crypto_exchange_web.Controllers
                 _logger.LogError("Error fetching execution plans!");
                 return BadRequest("Execution plans not found.");
             }
+            if (executionPlan.Count == 0)
+            {
+                _logger.LogError("0 Execution plans fetched!");
+                return BadRequest("0 Execution plans fetched.");
+            }
 
             _logger.LogInformation("Invoice evaluation summary : " + JsonConvert.SerializeObject(executionPlan));
             return Ok(new
