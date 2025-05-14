@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crypto-exchange", "crypto-exchange\crypto-exchange.csproj", "{932265C1-CC21-4344-BA6F-59F7F3761DFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{932265C1-CC21-4344-BA6F-59F7F3761DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932265C1-CC21-4344-BA6F-59F7F3761DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932265C1-CC21-4344-BA6F-59F7F3761DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932265C1-CC21-4344-BA6F-59F7F3761DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4359F158-52E3-45FE-B4A5-35BE7845461C}
+	EndGlobalSection
+EndGlobal
