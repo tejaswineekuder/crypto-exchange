@@ -17,8 +17,7 @@ var services = scope.ServiceProvider;
 var orderBookService = services.GetRequiredService<IOrderBookService>();
 var executionService = services.GetRequiredService<IExchangeExecutionService>();
 
-var path = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName;
-string folderPath = Path.Combine(path, "Exchanges");
+string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Exchanges");
 var orderBooks = orderBookService.LoadOrderBooks(folderPath);
 
 Console.WriteLine($"Loaded {orderBooks.Count} exchanges.");
