@@ -37,7 +37,18 @@ namespace crypto_exchange.Tests.Controllers
                 OrderAmount = 100,
                 OrderType = "Buy"
             };
-            _executionPlanService.GetExecutionPlans(request).Returns( new List<ExecutionPlanDto>());
+
+            var exectionPlan = new List<ExecutionPlanDto>
+            {
+                new ExecutionPlanDto
+                {
+                    Id = "exchange-01",
+                    Amount = 10,
+                    Price = 100,
+                    Type = "Buy"
+                }
+            };
+            _executionPlanService.GetExecutionPlans(request).Returns(exectionPlan);
 
             // Act
             var result = await controller.ExecutePlan(request);
