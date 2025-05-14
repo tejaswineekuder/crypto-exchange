@@ -47,10 +47,17 @@ namespace crypto_exchange_web.Controllers
                 return BadRequest("0 Execution plans fetched.");
             }
 
+            var checkForBalance = request.OrderAmount - executionPlan.Sum(x => x.Amount);
+            var balance = checkForBalance > 0 ? 
+                                        (Plan : "Could not process complete order amount" , Balance: checkForBalance ) : 
+                                        (Plan : "Process complete", Balance : checkForBalance);
+                
             _logger.LogInformation("Invoice evaluation summary : " + JsonConvert.SerializeObject(executionPlan));
             return Ok(new
             {
-                ExecutionPlan = executionPlan
+                ExecutionPlan = executionPlan,
+                Result = balance.Plan,
+                RemainingAmount = balance.Balance
             });
         }
     }
